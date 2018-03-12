@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+        Azure Function Settings
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="save()" #registerForm="ngForm">
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Url</ion-label>
+        <ion-input type="text" [(ngModel)]="url" name="url"></ion-input>
+      </ion-item>  
+      <ion-item>
+        <ion-label floating>Queue</ion-label>
+        <ion-input type="text" [(ngModel)]="queue" name="queue"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Code</ion-label>
+        <ion-input type="text" [(ngModel)]="code" name="code"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div padding>
+      <button ion-button color="primary" (click)="reset()" type="button">Zurücksetzen</button>
+      <button ion-button color="primary" type="submit">Speichern</button>
+    </div>  
+  </form>
+</ion-content>

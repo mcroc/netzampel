@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Netzampel</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item-sliding *ngFor="let device of deviceList">
+      <ion-item>
+        <button ion-button round full color="{{device.color}}" (click)="switchDevice(device);">
+            <ion-icon name="star" [hidden]=!device.checked></ion-icon>
+            {{device.label}}
+            <ion-icon name="star" [hidden]=!device.checked></ion-icon>
+        </button>        
+      </ion-item>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

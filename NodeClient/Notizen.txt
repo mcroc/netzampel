@@ -1,0 +1,21 @@
+
+npm install azure-storage
+npm install rpio
+
+
+
+Supervisor:
+===========
+sudo apt-get install supervisor
+sudo vi /etc/supervisor/conf.d/ampel.conf
+Inhalt:
+[ampel]
+command=/usr/bin/node /home/pi/Ampel/Ampel.js start
+directory=/home/pi/Ampel/
+autostart=true
+autorestart=true
+stderr_logfile=/var/log/ampel.err.log
+stdout_logfile=/var/log/ampel.out.log
+environment=ASPNETCORE_ENVIRONMENT=Production
+user=pi
+stopsignal=INT
