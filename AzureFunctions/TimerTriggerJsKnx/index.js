@@ -1,6 +1,6 @@
 module.exports = function (context, myTimer) {
     var request = require("request");
-    var url = process.env.UrlApi;
+    var url = process.env.UrlApiKnx;
     var username = process.env.LoginUsername;
     var password = process.env.LoginPassword;
     process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0';
